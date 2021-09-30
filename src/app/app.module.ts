@@ -25,6 +25,15 @@ import { AuthGuard } from './_helpers/auth.guard';
 import { DetailPageComponent } from './components/detail-page/detail-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HeroCarouselComponent } from './components/hero-carousel/hero-carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BannerComponent } from './components/banner/banner.component';
+import { HomeLandingComponent } from './components/home-landing/home-landing.component';
+import { BigCardComponent } from './components/big-card/big-card.component';
+import { MultiCardComponent } from './components/multi-card/multi-card.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { SideWidgetComponent } from './components/side-widget/side-widget.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +43,15 @@ import { HeroCarouselComponent } from './components/hero-carousel/hero-carousel.
     LoginComponent,
     DetailPageComponent,
     NavBarComponent,
-    HeroCarouselComponent
+    HeroCarouselComponent,
+    BannerComponent,
+    HomeLandingComponent,
+    BigCardComponent,
+    MultiCardComponent,
+    PaginationComponent,
+    CategoriesComponent,
+    SideWidgetComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +69,8 @@ import { HeroCarouselComponent } from './components/hero-carousel/hero-carousel.
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgbModule
   ],
   providers: [authInterceptorProviders, AuthGuard],
   bootstrap: [AppComponent]
