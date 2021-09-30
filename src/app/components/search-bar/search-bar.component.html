@@ -1,0 +1,38 @@
+<div class="search-container">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="search-form">
+        <span class="logo" routerLink="/">Blog</span>
+        <input class="search-input"
+        name="search" ngModel
+        placeholder="Search 500,000+ games"/>
+        <button class="search-button">Search</button>
+    </form>
+    <app-nav-bar></app-nav-bar>
+    <div>
+        <div *ngIf = "userIsAuthenticated">  
+            <div id="wrapper">
+                <a href="" class="my-super-cool-btn" (click) ="onLogout($event)">
+                  <div class="dots-container">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <span>Out!</span>
+                </a>
+              </div>
+        </div> 
+        <div *ngIf = "!userIsAuthenticated">  
+          <div id="wrapper">
+              <a href="" class="my-super-cool-btn" (click) ="onLogingo($event)">
+                <div class="dots-container">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <span>In!</span>
+              </a>
+            </div>
+      </div> 
+    </div>
+</div>
