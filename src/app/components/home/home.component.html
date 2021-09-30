@@ -1,5 +1,4 @@
-<app-hero-carousel></app-hero-carousel>
-<div class="filters">   
+<!-- <div class="filters">   
     <mat-form-field>
         <mat-label>Sort</mat-label>
         <mat-select
@@ -14,6 +13,20 @@
             <mat-option value="metacritic">Metacritic</mat-option>
         </mat-select>
     </mat-form-field>
+</div> -->
+<div class="container">
+<div class="row p-4">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Name</button>
+          <button ngbDropdownItem>Released</button>
+          <button ngbDropdownItem>Added</button>
+        </div>
+      </div>
+    </div>
+</div>
 </div>
 <div class="games">
     <ng-container *ngFor="let game of gameList">

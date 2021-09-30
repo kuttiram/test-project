@@ -1,20 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-hero-carousel',
   templateUrl: './hero-carousel.component.html',
-  styleUrls: ['./hero-carousel.component.css']
+  styleUrls: ['./hero-carousel.component.css'],
+  providers: [NgbCarouselConfig] 
 })
 export class HeroCarouselComponent implements OnInit {
   slides: Array<{image: string}> = []; 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.slides = [{image:'https://images.pexels.com/photos/2674052/pexels-photo-2674052.jpeg'},
-                    {image:'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg'},
-                    {image:'https://images.pexels.com/photos/6992/forest-trees-northwestisbest-exploress.jpg'},
-                    {image:'https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg'},
-                    {image:'https://images.pexels.com/photos/982263/pexels-photo-982263.jpeg'}];
+  constructor(config: NgbCarouselConfig) {
+    // customize default values of carousels used by this component tree
+    config.interval = 10000;
+    config.wrap = false;
+    config.keyboard = false;
+    config.pauseOnHover = false;
   }
 
+  ngOnInit(): void {
+    
+  }
+  images = [{image:'https://i.stack.imgur.com/sRYBZ.jpg'},
+                    {image:'https://mdbootstrap.com/img/Photos/Slides/img%20(18).jpg'},
+                    {image:'https://mdbootstrap.com/img/Photos/Slides/img%20(19).jpg'},
+                    {image:'https://mdbootstrap.com/img/Photos/Slides/img%20(20).jpg'},
+                    {image:'https://mdbootstrap.com/img/Photos/Slides/img%20(21).jpg'}];
+  //images = [700, 533, 807, 124].map((n) => `https://picsum.photos/id/${n}/900/500`);
 }
+
