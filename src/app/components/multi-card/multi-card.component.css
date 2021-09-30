@@ -1,0 +1,72 @@
+.games{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0px auto;
+}
+
+.game{
+    width: 340px;
+    margin: 10px;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 4px 3px 8px 0px #673ab7;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.div ng-container a{
+    cursor: pointer;
+}
+
+.game:hover{
+    box-shadow: 4px 3px 11px 6px #673ab7;
+    transform: translate(-3px);
+}
+
+.game-thumb-container{
+    background-color: #000;
+    position: relative;
+    height: 172px;
+    color: #202020;
+    text-align: center;
+}
+
+.game-thumbnail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:  0 auto;
+    height: 172px;
+}
+
+.game-description{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 130px;
+}
+
+.game-name{
+    color:#202020;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.game-platforms{
+    display: flex;
+}
+
+.game-platform{
+    width: 20px;
+    margin-right: 10px;
+}
