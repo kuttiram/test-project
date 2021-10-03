@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpclientService } from 'src/app/services/httpclient.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { HttpclientService } from 'src/app/services/httpclient.service';
 })
 export class MultiCardComponent implements OnInit {
   gameList: any[] = [];
-  constructor(private http: HttpclientService) { }
+  constructor(private http: HttpclientService, private router: Router) { }
 
   ngOnInit(): void {
     this.onGetGames();
@@ -25,6 +26,12 @@ export class MultiCardComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  onDetailNav(e: any)
+  {
+    e.preventDefault();
+    this.router.navigate(['/detail']);
   }
 
 }
