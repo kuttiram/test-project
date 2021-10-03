@@ -34,6 +34,8 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SideWidgetComponent } from './components/side-widget/side-widget.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DetailHeaderComponent } from './components/detail-header/detail-header.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { FooterComponent } from './components/footer/footer.component';
     PaginationComponent,
     CategoriesComponent,
     SideWidgetComponent,
-    FooterComponent
+    FooterComponent,
+    DetailHeaderComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
     <div class="games">
         <ng-container *ngFor="let game of gameList">
-            <a href="">
+            <a href="" (click) = "onDetailNav($event)">
             <div class="game">
                 <div class="game-thumb-container">
                     <img *ngIf="game.background_Image"
