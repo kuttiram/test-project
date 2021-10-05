@@ -36,6 +36,8 @@ import { SideWidgetComponent } from './components/side-widget/side-widget.compon
 import { FooterComponent } from './components/footer/footer.component';
 import { DetailHeaderComponent } from './components/detail-header/detail-header.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { DetailContentComponent } from './components/detail-content/detail-content.component';
+import { DetailCommentsComponent } from './components/detail-comments/detail-comments.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     SideWidgetComponent,
     FooterComponent,
     DetailHeaderComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    DetailContentComponent,
+    DetailCommentsComponent
   ],
   imports: [
     BrowserModule,
