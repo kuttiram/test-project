@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpclientService } from 'src/app/services/httpclient.service';
 
 @Component({
   selector: 'app-banner',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-
-  constructor() { }
+  
+  homedata: any = {};
+  constructor(private http: HttpclientService) { }
 
   ngOnInit(): void {
+    this.onGetHomeTile();
+  }
+
+  onGetHomeTile()
+  {
+    this.http.getHomeTitle().subscribe(
+      data => {
+        this.homedata = data;
+        },
+      err =>
+      {
+        console.log(err);
+      }
+    );
   }
 
 }
