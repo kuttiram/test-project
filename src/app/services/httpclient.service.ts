@@ -34,6 +34,11 @@ export class HttpclientService {
     return this.http.get(`${environment.apiUrl}Home/GetTitle`,{ headers: headers });
   }
 
+  getHomeBanner()
+  {
+    return this.http.get(`${environment.apiUrl}Home/GetBanner`,{ headers: headers });
+  }
+
   private extractData(res: Response): any {
     const body = res;
     return body || { };

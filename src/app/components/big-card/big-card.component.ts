@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpclientService } from 'src/app/services/httpclient.service';
 
 @Component({
   selector: 'app-big-card',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./big-card.component.css']
 })
 export class BigCardComponent implements OnInit {
-
-  constructor() { }
+  bannerData: any = {};
+  imageUrl: string ='';
+  constructor(private http: HttpclientService) { }
 
   ngOnInit(): void {
+    this.onGetBigBanner();
   }
 
+  onGetBigBanner()
+  {
+    this.http.getHomeBanner().subscribe(
+      data => {
+        this.bannerData = data;
+        this.imageUrl = this.bannerData.pageImages[0].imageUrl;
+        },
+      err =>
+      {
+        console.log(err);
+      }
+    );
+  }
 }
