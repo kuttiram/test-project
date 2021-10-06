@@ -9,14 +9,14 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { GaugeModule } from 'angular-gauge';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatIconModule }  from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSelectModule } from '@angular/material/select';
+// import { MatTabsModule } from '@angular/material/tabs';
+// import { MatIconModule }  from '@angular/material/icon';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatCardModule } from '@angular/material/card';
+// import { MatToolbarModule } from '@angular/material/toolbar';
+// import { MatSelectModule } from '@angular/material/select';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
@@ -70,14 +70,14 @@ import { DetailCommentsComponent } from './components/detail-comments/detail-com
     FormsModule,
     ReactiveFormsModule,
     GaugeModule.forRoot(),
-    MatFormFieldModule,
-    MatSelectModule,
-    MatIconModule,
-    MatTabsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule,
-    MatToolbarModule,
+    // MatFormFieldModule,
+    // MatSelectModule,
+    // MatIconModule,
+    // MatTabsModule,
+    // MatInputModule,
+    // MatButtonModule,
+    // MatCardModule,
+    // MatToolbarModule,
     NgbModule
   ],
   providers: [authInterceptorProviders, AuthGuard],
