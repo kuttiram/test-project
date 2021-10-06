@@ -1,4 +1,20 @@
-.games{
+.texthiddentitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+.texthiddendes {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+/* .games{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -69,4 +85,4 @@
 .game-platform{
     width: 20px;
     margin-right: 10px;
-}
+} */

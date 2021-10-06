@@ -39,6 +39,11 @@ export class HttpclientService {
     return this.http.get(`${environment.apiUrl}Home/GetBanner`,{ headers: headers });
   }
 
+  getPostList()
+  {
+    return this.http.get(`${environment.apiUrl}Home/GetBannerList`,{ headers: headers });
+  }
+
   private extractData(res: Response): any {
     const body = res;
     return body || { };

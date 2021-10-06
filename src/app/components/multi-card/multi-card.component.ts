@@ -8,18 +8,32 @@ import { HttpclientService } from 'src/app/services/httpclient.service';
   styleUrls: ['./multi-card.component.css']
 })
 export class MultiCardComponent implements OnInit {
-  gameList: any[] = [];
+  postList: any = [];
   constructor(private http: HttpclientService, private router: Router) { }
 
   ngOnInit(): void {
-    this.onGetGames();
+    //this.onGetGames();
+    this.onGetPosts();
   }
 
-  onGetGames()
+  // onGetGames()
+  // {
+  //   this.http.getGameList("","").subscribe(
+  //     data => {
+  //       this.gameList = data
+  //       },
+  //     err =>
+  //     {
+  //       console.log(err);
+  //     }
+  //   );
+  // }
+
+  onGetPosts()
   {
-    this.http.getGameList("","").subscribe(
+    this.http.getPostList().subscribe(
       data => {
-        this.gameList = data
+        this.postList = data;
         },
       err =>
       {

@@ -1,26 +1,29 @@
-    <div class="games">
-        <ng-container *ngFor="let game of gameList">
-            <a href="" (click) = "onDetailNav($event)">
-            <div class="game">
+<div class="row row-cols-1 row-cols-sm-2">
+   <div class="col mb-4" *ngFor="let post of postList">
+        <div class="card" >
+            <!-- <div class="game">
                 <div class="game-thumb-container">
-                    <img *ngIf="game.background_Image"
-                    src="{{ game.background_Image }}" 
+                    <img *ngIf="post.pageImages"
+                    src="../../../assets/Images/Implementing.png" 
                     alt="thumbnail" 
                     class="game-thumbnail"/>
-                    <p *ngIf="!game.background_Image">No Image</p>
+                    <p *ngIf="!post.pageImages">No Image</p>
                 </div>
                 <div class="game-description">
-                    <p class="game-name">{{ game.name }}</p>
-                    <div class="game-platforms">
-                        <img *ngFor="let gamePlatform of game.parentPlatForms"
-                        src="{{ gamePlatform.platForm }}" 
-                        alt="slug" 
-                        class="game-platform"
-                        />
-                    </div>
+                    <div class="small text-muted">{{post.postDate | date:'longDate'}}</div>
+                    <h2 class="card-title h4">{{post.title}}</h2>
+                    <p class="card-text">{{post.description}}</p>
+                    <a class="btn btn-primary" href="#!">Read more →</a>                
                 </div>
+            </div> -->
+             <a href="" (click) = "onDetailNav($event)"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+            <div class="card-body">
+                <div class="small text-muted">{{post.postDate | date:'longDate'}}</div>
+                <h2 class="card-title h4 texthiddentitle">{{post.title}}</h2>
+                <p class="card-text texthiddendes">{{post.description}}</p>
+                <a class="btn btn-primary" href="" (click) = "onDetailNav($event)">Read more →</a>
             </div>
-            </a>
-        </ng-container>
+        </div>
     </div>
+</div>
 

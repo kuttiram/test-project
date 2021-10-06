@@ -21,8 +21,8 @@ const routes: Routes = [
   },
   {
     path: 'search/:game-search',
-    component: HomeComponent,
-    canActivate: [AuthGuard]
+    component: HomeComponent
+    //canActivate: [AuthGuard]
   },
   {
     path: 'detail',
